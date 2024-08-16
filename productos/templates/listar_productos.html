@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lista de clientes</title>
+</head>
+<body>
+  <h1>Lista de Productos</h1>
+  <ul>
+    {% for producto in productos %}
+      <li>{{ producto.nombre }} - {{ producto.descripcion }} - {{ producto.precio }}- {{ producto.stock }}</li>
+    {% endfor %}
+  </ul>
+  <!-- Enlace para agregar un nuevo producto -->
+  <a href="{% url 'agregar_producto' %}">Agregar Nuevo Producto</a>
+  <!-- Enlace para ver la lista de clientes -->
+  <a href="{% url 'listar_clientes' %}">Ver Clientes</a>
+</body>
+</html>
